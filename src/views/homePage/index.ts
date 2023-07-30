@@ -1,39 +1,72 @@
 import {Component, Vue} from 'vue-facing-decorator';
+import { ref } from 'vue';
 import tableLine from '@/components/tableLine/index.vue';
 import createNewBlock from '@/components/createNewBlock/index.vue';
+import draggable from 'vuedraggable';
 
 @Component({
     name: "homePage",
     components: {
         tableLine,
-        createNewBlock
+        createNewBlock,
+        draggable
     },
 })
 export default class homePage extends Vue {
-    public test: boolean = false;
 
-    public movedIndex: number | undefined;
-
-    public data = [
+    public data = ref([
         {
             num: 1,
-            textTovar: 'test',
-            prise: 20,
-            quantity: 1,
-            description: 'test',
-            result: 1234
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
         },
         {
             num: 2,
-            textTovar: 'test',
-            prise: 20,
-            quantity: 1,
-            description: 'test',
-            result: 1234
-        }
-    ]
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },{
+            num: 3,
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },{
+            num: 4,
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },{
+            num: 5,
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },{
+            num: 6,
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },{
+            num: 7,
+            textTovar: 'Мраморный щебень фр. 2-5 мм, 25кг',
+            prise: 1231,
+            quantity: 12,
+            description: 'Мраморный щебень',
+            result: 1231
+        },
+    ])
 
-    public lineMoved(index:number) {
-        this.movedIndex = index
-    }
+    public getVisible = false
 }

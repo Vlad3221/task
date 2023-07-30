@@ -4,10 +4,6 @@
   position: relative;
   height: 20px;
   margin-top: 20px;
-
-  @media (max-width: 767.98px) {
-    //margin: 25px 10px 0 10px;
-  }
 }
 
 .linkHeader {
@@ -250,5 +246,14 @@ table {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.sortable-chosen {
+  width: 100%;
+  outline: dashed 3px #a6b7d4;
+
+  *{
+    opacity: 0;
   }
 }

@@ -22,46 +22,12 @@ export default class tableLine extends Vue {
     @Prop()
     public result: number = 0;
 
-    @Prop()
-    public movedIndex: number | undefined;
-
-    @Prop()
-    public index!: number;
 
     public isOpened = false;
 
     public opened() {
         this.isOpened = !this.isOpened;
-
     };
 
-    public mouseEnterDown = false;
-
-    public mounted() {
-        document.addEventListener('mousemove', (e)=> {
-            if (!this.movedIndex) return;
-            this.lineMoved(e, this.movedIndex);
-        })
-        document.addEventListener('mouseup', (e)=> {
-            if (this.movedIndex){
-                this.lineLeave();
-            }
-        })
-    };
-
-    public lineMoved(e:any, index:number) {
-        const lines = document.getElementsByClassName(`line${index}`);
-
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i] as any;
-            if (!line?.style) return;
-            console.log(line);
-            line.style.position = 'fixed';
-            line.style.top = e.y + 'px';
-        }
-    };
-
-    public lineLeave() {
-        this.$emit('lineMoved', undefined)
-    }
+    public checkMouse = false
 }

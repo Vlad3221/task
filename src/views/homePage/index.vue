@@ -1,7 +1,7 @@
 <template>
   <div class="homePage">
     <div class="block">
-      <button class="createString" @click="test = !test">
+      <button class="createString" @click="getVisible = !getVisible">
         <span>+</span>
         Добавить строку
       </button>
@@ -34,19 +34,22 @@
             <span class="bold">Итого</span>
           </td>
         </tr>
-          <tableLine v-for="(item, index) in data"
-                     :num="item.num"
-                     :textTovar='item.textTovar'
-                     :prise="item.prise"
-                     :quantity="item.quantity"
-                     :description="item.description"
-                     :result="item.result"
-                     :movedIndex="movedIndex"
-                     :index="index"
-                     @lineMoved = "lineMoved"
-          />
+        <draggable v-model="data" tag="ul" :animation="300">
+          <template #item="{ element: data }">
+            <li>
+              <tableLine
+                  :num="data.num"
+                  :textTovar='data.textTovar'
+                  :prise="data.prise"
+                  :quantity="data.quantity"
+                  :description="data.description"
+                  :result="data.result"
+              />
+            </li>
+          </template>
+        </draggable>
         <div class="footer">
-          <createNewBlock :visible="test"/>
+          <createNewBlock :visible="getVisible"/>
           <div class="result__block">
             <div class="blockResultAll">
               <div>
