@@ -13,10 +13,10 @@
       <table>
         <tr>
           <td class="gl">
-            <span class="bold">Номе</span>
+            <span class="bold">Номер</span>
           </td>
           <td class="gl">
-            <span class="bold">Д</span>
+            <span class="bold">Действие</span>
           </td>
           <td class="gl">
             <span class="bold">Наименование еденицы</span>
@@ -47,7 +47,7 @@
           />
         <div class="footer">
           <createNewBlock :visible="test"/>
-          <div>
+          <div class="result__block">
             <div class="blockResultAll">
               <div>
                 <span class="name__L">Сумма:</span>

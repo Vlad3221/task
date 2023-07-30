@@ -80,10 +80,6 @@
     display: flex;
   }
 
-  //&:hover {
-  //  display: flex;
-  //}
-
   button {
     background-color: unset;
     width: 100%;
@@ -94,5 +90,13 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
+  }
+}
+
+.phone {
+  display: none;
+
+  @media (max-width: 767.98px) {
+    display: block;
   }
 }

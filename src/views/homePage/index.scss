@@ -4,12 +4,20 @@
   position: relative;
   height: 20px;
   margin-top: 20px;
+
+  @media (max-width: 767.98px) {
+    //margin: 25px 10px 0 10px;
+  }
 }
 
 .linkHeader {
   display: block;
   position: relative;
   margin-right: 20px;
+
+  @media (max-width: 767.98px) {
+    font-size: 14px;
+  }
 }
 // общий блок
 .block {
@@ -63,6 +71,10 @@ table {
   tr {
     display: flex;
     justify-content: space-around;
+    
+    @media (max-width: 767.98px) {
+      display: block;
+    }
 
     td {
       width: 100%;
@@ -72,10 +84,30 @@ table {
       padding-left: 10px;
       white-space: nowrap;
 
+      @media (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 15px;
+        height: max-content;
+
+
+        & div {
+          margin-top: 5px;
+          margin-bottom: 15px;
+        }
+      }
+
+
       &.gl {
         border-top: 1px solid #cccccc;
         border-right: 1px solid #cccccc;
         border-bottom: 1px solid #cccccc;
+
+        @media (max-width: 767.98px) {
+          display: none;
+        }
       }
 
       span.bold {
@@ -93,28 +125,57 @@ table {
         padding: 10px 15px 9px 15px;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @media (max-width: 767.98px) {
+          display: flex;
+          align-items: center;
+          color: black;
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        font-size: 10px;
+        color: #8f8f8f;
       }
 
       &:nth-child(1) {
         max-width: 50px;
+
+        @media (max-width: 767.98px) {
+          display: none;
+        }
       }
 
       &:nth-child(2) {
         max-width: 25px;
         padding-right: 3px;
+
+        @media (max-width: 767.98px) {
+          max-width: 100%;
+        }
       }
 
       &:nth-child(4), &:nth-child(5) {
         max-width: 194px;
+        @media (max-width: 767.98px) {
+          max-width: 100%;
+        }
       }
 
       &:nth-child(6) {
         max-width: 150px;
+        @media (max-width: 767.98px) {
+          max-width: 100%;
+        }
       }
 
       &:nth-child(7) {
         max-width: 160px;
         border-right: none;
+        @media (max-width: 767.98px) {
+          max-width: 100%;
+        }
 
         .informationBlock {
           margin-right: 15px;
@@ -130,6 +191,19 @@ table {
   justify-content: space-between;
   padding: 10px 15px 0 85px;
 
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    padding: 10px 15px 0 15px;
+  }
+
+  .result__block {
+    margin-left: auto;
+
+    @media (max-width: 767.98px) {
+      margin: 0;
+    }
+  }
+
 
   .blockResultAll {
     display: block;
@@ -140,11 +214,21 @@ table {
     border-radius: 5px;
     border: solid 1px #eeeff1;
 
+    @media (max-width: 794px) {
+      width: 250px;
+    }
+
+    @media (max-width: 767.98px) {
+      width: 100%;
+    }
+
     &.resultation {
       margin-top: 5px;
+      margin-left: auto;
 
-      .name__R {
+      .name__R, .name__L {
         font-weight: bold;
+        color: black;
       }
     }
 

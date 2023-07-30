@@ -252,4 +252,9 @@ header {
 // Шрифт
 h1 {
   font-size: 30px;
+  //margin: 0 10px;
+
+  @media (max-width: $md3) {
+    max-width: 300px;
+  }
 }

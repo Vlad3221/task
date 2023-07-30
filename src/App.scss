@@ -14,6 +14,12 @@
   max-width: 229px;
   min-height: 100vh;
   background-image: radial-gradient(circle at 29% 0, #000, #1c2734 103%);
+  
+  @media (max-width: 1180px) {
+    & {
+      display: none;
+    }
+  }
 }
 // правая сторона страницы
 .rightBlocksElements {
@@ -21,4 +27,8 @@
   position: relative;
   width: 100%;
   padding: 25px 25px 0 25px;
+
+  @media (max-width: 767.98px) {
+    padding: 16px 10px 16px 10px;
+  }
 }
